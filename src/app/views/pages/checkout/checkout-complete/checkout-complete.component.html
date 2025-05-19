@@ -1,0 +1,33 @@
+<section id="checkout-complete">
+  <div class="checkout-complete-header text-center">
+    <div class="rounded-circle checkmark">
+      <i>✓</i>
+    </div>
+    <h4>Chúc mừng! Bạn đã hoàn thành thanh toán.</h4>
+    <p>
+      Chúng tôi đã nhận được đơn đặt hàng của bạn và sẽ xử lý nó trong thời gian
+      sớm nhất.
+    </p>
+  </div>
+  <div class="checkout-complete-summary text-center">
+    <div class="item">
+      <h5>Mã đặt hàng</h5>
+      <p>120</p>
+    </div>
+    <div class="item">
+      <h5>Ngày</h5>
+      <p>{{ today | date : "dd/MM/yyyy" }}</p>
+    </div>
+    <div class="item">
+      <h5>Tổng cộng</h5>
+      <p>{{ totalPrice | vnd }}</p>
+    </div>
+    <div class="item">
+      <h5>Phương thức thanh toán</h5>
+      <p>Thanh toán khi nhận hàng</p>
+    </div>
+  </div>
+  <button class="btn btn-warning rounded mt-4" (click)="navigateToStore()">
+    Trở về cửa hàng
+  </button>
+</section>
